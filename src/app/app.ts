@@ -1,11 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { ContactListComponent } from
+  './components/contact-list/contact-list';
 
 @Component({
-  imports: [],
   selector: 'app-root',
-  styleUrl: './app.css',
-  templateUrl: './app.html',
+  standalone: true,
+  imports: [ContactListComponent],
+  templateUrl: './app.html'
 })
-export class App {
-  protected readonly title = signal('dashboard-app');
-}
+export class AppComponent { }
